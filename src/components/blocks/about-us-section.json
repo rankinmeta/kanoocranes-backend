@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blocks_about_us_sections",
+  "info": {
+    "displayName": "About Us Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

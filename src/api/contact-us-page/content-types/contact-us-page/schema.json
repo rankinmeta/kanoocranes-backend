@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_us_pages",
+  "info": {
+    "singularName": "contact-us-page",
+    "pluralName": "contact-us-pages",
+    "displayName": "Contact Us Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "blocks.simple-hero",
+      "repeatable": false
+    },
+    "contact_details": {
+      "type": "component",
+      "component": "blocks.contact-details-section",
+      "repeatable": false
+    },
+    "form_section": {
+      "type": "component",
+      "component": "blocks.form-section",
+      "repeatable": false
+    },
+    "partners_section": {
+      "type": "component",
+      "component": "blocks.logo-cloud",
+      "repeatable": false
+    }
+  }
+}

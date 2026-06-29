@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_section_with_sticky_cards",
+  "info": {
+    "displayName": "Section with sticky cards"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "component": "elements.icon-label-des",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

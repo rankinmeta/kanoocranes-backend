@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_simple_sections",
+  "info": {
+    "displayName": "Simple Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

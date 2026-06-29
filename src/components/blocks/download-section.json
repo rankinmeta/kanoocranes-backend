@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_download_sections",
+  "info": {
+    "displayName": "Download Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "resources": {
+      "type": "component",
+      "component": "elements.download-card",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

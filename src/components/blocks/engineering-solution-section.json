@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_blocks_engineering_solution_sections",
+  "info": {
+    "displayName": "Engineering Solution Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    },
+    "engineering_solution_info": {
+      "type": "component",
+      "component": "elements.engineer-solution-info",
+      "repeatable": false
+    },
+    "details": {
+      "type": "component",
+      "component": "elements.es-card",
+      "repeatable": true,
+      "max": 3
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_resource_sections",
+  "info": {
+    "displayName": "Resource Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    },
+    "resources": {
+      "type": "component",
+      "component": "elements.resource-card",
+      "repeatable": true,
+      "max": 3
+    }
+  },
+  "config": {}
+}

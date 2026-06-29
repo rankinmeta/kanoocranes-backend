@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_elements_covers",
+  "info": {
+    "displayName": "Cover"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "image",
+      "enum": [
+        "image",
+        "video"
+      ]
+    },
+    "responsive_image": {
+      "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "image"
+          ]
+        }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

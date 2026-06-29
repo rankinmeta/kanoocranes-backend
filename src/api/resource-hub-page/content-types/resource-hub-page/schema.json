@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "resource_hub_pages",
+  "info": {
+    "singularName": "resource-hub-page",
+    "pluralName": "resource-hub-pages",
+    "displayName": "Resource Hub Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "blocks.simple-hero",
+      "repeatable": false
+    },
+    "resources_list_title": {
+      "type": "string",
+      "required": true
+    },
+    "banner_title": {
+      "type": "string",
+      "required": true
+    },
+    "banner_description": {
+      "type": "text",
+      "required": true
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
+    }
+  }
+}

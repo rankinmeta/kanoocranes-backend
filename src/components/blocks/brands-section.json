@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_brands_sections",
+  "info": {
+    "displayName": "Brands Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "brands": {
+      "type": "component",
+      "component": "elements.brand-card",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

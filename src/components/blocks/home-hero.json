@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_home_heroes",
+  "info": {
+    "displayName": "Home Hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "background": {
+      "type": "component",
+      "component": "elements.cover",
+      "repeatable": true
+    },
+    "highlights": {
+      "type": "component",
+      "component": "elements.highlight-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

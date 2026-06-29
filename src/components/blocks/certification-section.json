@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_certification_sections",
+  "info": {
+    "displayName": "Certification Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "certificates": {
+      "type": "component",
+      "component": "elements.certificate",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

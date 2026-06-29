@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_why_buy_from_us_sections",
+  "info": {
+    "displayName": "Why Buy From Us Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "details": {
+      "type": "component",
+      "component": "elements.label-des",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

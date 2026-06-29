@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_related_models",
+  "info": {
+    "displayName": "Related Model"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "models": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::model.model"
+    }
+  },
+  "config": {}
+}

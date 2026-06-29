@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_elements_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "socials": {
+      "type": "component",
+      "component": "elements.icon-link",
+      "repeatable": true
+    },
+    "quick_links": {
+      "type": "component",
+      "component": "elements.footer-link",
+      "repeatable": false
+    },
+    "our_services": {
+      "type": "component",
+      "component": "elements.footer-link",
+      "repeatable": false
+    },
+    "industries": {
+      "type": "component",
+      "component": "elements.footer-link",
+      "repeatable": false
+    },
+    "contact_us": {
+      "type": "component",
+      "component": "elements.contact-link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

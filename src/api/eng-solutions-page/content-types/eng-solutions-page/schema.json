@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "eng_solutions_pages",
+  "info": {
+    "singularName": "eng-solutions-page",
+    "pluralName": "eng-solutions-pages",
+    "displayName": "Eng Solutions Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "blocks.simple-hero",
+      "repeatable": false
+    },
+    "crane_engineering_section": {
+      "type": "component",
+      "component": "blocks.simple-section",
+      "repeatable": false
+    },
+    "engineering_services": {
+      "type": "component",
+      "component": "blocks.engineering-services",
+      "repeatable": false
+    },
+    "sticky_cards": {
+      "type": "component",
+      "component": "blocks.simple-section",
+      "repeatable": true
+    },
+    "engineering_advantage": {
+      "type": "component",
+      "component": "blocks.section-with-grid",
+      "repeatable": false
+    },
+    "how_we_work": {
+      "type": "component",
+      "component": "blocks.buying-guide-section",
+      "repeatable": false
+    },
+    "featured_projects": {
+      "type": "component",
+      "component": "blocks.featured-products-section",
+      "repeatable": false
+    },
+    "gallery_section": {
+      "type": "component",
+      "component": "blocks.gallery-section",
+      "repeatable": false
+    },
+    "testimonial_section": {
+      "type": "component",
+      "component": "blocks.testimonial-section",
+      "repeatable": false
+    },
+    "integrated_solution_section": {
+      "type": "component",
+      "component": "blocks.engineering-support-section",
+      "repeatable": false
+    },
+    "industry_application": {
+      "type": "component",
+      "component": "blocks.section-with-sticky-cards",
+      "repeatable": false
+    },
+    "experts_section": {
+      "type": "component",
+      "component": "blocks.experts-section",
+      "repeatable": false
+    },
+    "related_resources": {
+      "type": "component",
+      "component": "blocks.related-resources",
+      "repeatable": false
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
+    }
+  }
+}

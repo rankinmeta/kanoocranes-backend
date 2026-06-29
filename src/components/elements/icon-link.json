@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_icon_links",
+  "info": {
+    "displayName": "Icon Link"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link": {
+      "type": "text",
+      "required": true
+    },
+    "isExternal": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "config": {}
+}

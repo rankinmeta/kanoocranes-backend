@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_engineering_support_sections",
+  "info": {
+    "displayName": "Engineering Support Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "details": {
+      "type": "component",
+      "component": "elements.label",
+      "repeatable": true,
+      "required": true,
+      "max": 4
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

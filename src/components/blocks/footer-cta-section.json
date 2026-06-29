@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_footer_cta_sections",
+  "info": {
+    "displayName": "Footer CTA Section"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

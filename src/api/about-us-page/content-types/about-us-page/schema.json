@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_pages",
+  "info": {
+    "singularName": "about-us-page",
+    "pluralName": "about-us-pages",
+    "displayName": "About Us Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "blocks.simple-hero",
+      "repeatable": false
+    },
+    "who_we_are": {
+      "type": "component",
+      "component": "blocks.about-us-section",
+      "repeatable": false
+    },
+    "about_kanoo_group": {
+      "type": "component",
+      "component": "blocks.about-kanoo-group",
+      "repeatable": false
+    },
+    "business_units_section": {
+      "type": "component",
+      "component": "blocks.business-units-section",
+      "repeatable": false
+    },
+    "brands_section": {
+      "type": "component",
+      "component": "blocks.brands-section",
+      "repeatable": false
+    },
+    "engineering_approach": {
+      "type": "component",
+      "component": "blocks.engineering-approach-section",
+      "repeatable": false
+    },
+    "featured_projects_section": {
+      "type": "component",
+      "component": "blocks.featured-products-section",
+      "repeatable": false
+    },
+    "expertise_section": {
+      "type": "component",
+      "component": "blocks.expertise-section",
+      "repeatable": false
+    },
+    "certification_section": {
+      "type": "component",
+      "component": "blocks.certification-section",
+      "repeatable": false
+    },
+    "team_section": {
+      "type": "component",
+      "component": "blocks.team-section",
+      "repeatable": false
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
+    }
+  }
+}

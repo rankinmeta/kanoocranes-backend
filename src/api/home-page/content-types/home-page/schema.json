@@ -1,0 +1,80 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "blocks.home-hero",
+      "repeatable": false
+    },
+    "partners_section": {
+      "type": "component",
+      "component": "blocks.logo-cloud",
+      "repeatable": false
+    },
+    "engineering_solution_section": {
+      "type": "component",
+      "component": "blocks.engineering-solution-section",
+      "repeatable": false
+    },
+    "our_solutions_section": {
+      "type": "component",
+      "component": "blocks.our-solutions-section",
+      "repeatable": false
+    },
+    "featured_projects_section": {
+      "type": "component",
+      "component": "blocks.featured-products-section",
+      "repeatable": false
+    },
+    "gallery_section": {
+      "type": "component",
+      "component": "blocks.gallery-section",
+      "repeatable": false
+    },
+    "featured_models_section": {
+      "type": "component",
+      "component": "blocks.featured-models-section",
+      "repeatable": false
+    },
+    "experts_section": {
+      "type": "component",
+      "component": "blocks.experts-section",
+      "repeatable": false
+    },
+    "industries_section": {
+      "type": "component",
+      "component": "blocks.industries-section",
+      "repeatable": false
+    },
+    "testimonial_section": {
+      "type": "component",
+      "component": "blocks.testimonial-section",
+      "repeatable": false
+    },
+    "about_section": {
+      "type": "component",
+      "component": "blocks.about-us-section",
+      "repeatable": false
+    },
+    "resources_section": {
+      "type": "component",
+      "component": "blocks.resource-section",
+      "repeatable": false
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "models",
+  "info": {
+    "singularName": "model",
+    "pluralName": "models",
+    "displayName": "Model"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "main_section": {
+      "type": "component",
+      "component": "blocks.main-model-section",
+      "repeatable": false
+    },
+    "model_name": {
+      "type": "string",
+      "required": true
+    },
+    "model_slug": {
+      "type": "uid",
+      "targetField": "model_name",
+      "required": true
+    },
+    "why_buy_from_kc_section": {
+      "type": "component",
+      "component": "blocks.section-with-grid",
+      "repeatable": false
+    },
+    "procurement_section": {
+      "type": "component",
+      "component": "blocks.simple-section",
+      "repeatable": false
+    },
+    "technical_application": {
+      "type": "component",
+      "component": "blocks.section-with-sticky-cards",
+      "repeatable": false
+    },
+    "safety_and_compliance": {
+      "type": "component",
+      "component": "blocks.section-with-grid",
+      "repeatable": false
+    },
+    "downloads_section": {
+      "type": "component",
+      "component": "blocks.download-section",
+      "repeatable": false
+    },
+    "related_model_section": {
+      "type": "component",
+      "component": "blocks.related-model",
+      "repeatable": false
+    },
+    "applications_section": {
+      "type": "component",
+      "component": "blocks.site-selection-section",
+      "repeatable": false
+    },
+    "projects_section": {
+      "type": "component",
+      "component": "blocks.projects-section",
+      "repeatable": false
+    },
+    "gallery_section": {
+      "type": "component",
+      "component": "blocks.gallery-section",
+      "repeatable": false
+    },
+    "testimonial_section": {
+      "type": "component",
+      "component": "blocks.testimonial-section",
+      "repeatable": false
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
+    }
+  }
+}

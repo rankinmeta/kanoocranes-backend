@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_featured_models_sections",
+  "info": {
+    "displayName": "Featured Models Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_crane_selector_sections",
+  "info": {
+    "displayName": "Crane Selector Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,68 @@
+{
+  "collectionName": "components_blocks_main_model_sections",
+  "info": {
+    "displayName": "Main Model Section"
+  },
+  "options": {},
+  "attributes": {
+    "short_description": {
+      "type": "text",
+      "required": true
+    },
+    "crane_capacity": {
+      "type": "string"
+    },
+    "max_working_radius": {
+      "type": "string"
+    },
+    "max_lifting_height": {
+      "type": "string"
+    },
+    "hook_height": {
+      "type": "string"
+    },
+    "project_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-type.project-type"
+    },
+    "crane_configuration": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "text",
+      "required": true
+    },
+    "model_short_name": {
+      "type": "string",
+      "required": true
+    },
+    "model_specifications": {
+      "type": "component",
+      "component": "elements.specifications",
+      "repeatable": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "manufacturer": {
+      "type": "string",
+      "required": true
+    },
+    "listingType": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "sale",
+        "rent",
+        "both"
+      ]
+    }
+  },
+  "config": {}
+}

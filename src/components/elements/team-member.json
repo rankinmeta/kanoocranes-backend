@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_elements_team_members",
+  "info": {
+    "displayName": "Team Member"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "linkedin_url": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

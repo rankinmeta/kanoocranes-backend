@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_es_cards",
+  "info": {
+    "displayName": "ES Card"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

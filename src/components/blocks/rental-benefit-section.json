@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_rental_benefit_sections",
+  "info": {
+    "displayName": "Rental Benefit Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "accordion": {
+      "type": "component",
+      "component": "elements.accordion",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

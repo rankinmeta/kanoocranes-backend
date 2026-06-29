@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_contact_links",
+  "info": {
+    "displayName": "Contact Link"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "email": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "address": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

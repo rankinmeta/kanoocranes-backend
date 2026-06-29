@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_experts_sections",
+  "info": {
+    "displayName": "Experts Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "experts": {
+      "type": "component",
+      "component": "elements.expert-card",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

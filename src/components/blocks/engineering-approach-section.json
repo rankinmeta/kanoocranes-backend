@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_engineering_approach_sections",
+  "info": {
+    "displayName": "Engineering Approach Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "details": {
+      "type": "component",
+      "component": "elements.label-des",
+      "repeatable": true,
+      "required": true,
+      "max": 3
+    }
+  },
+  "config": {}
+}

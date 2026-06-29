@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_sales_category_sections",
+  "info": {
+    "displayName": "Sales Category Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "details": {
+      "type": "component",
+      "component": "elements.brand-card",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

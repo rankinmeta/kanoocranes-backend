@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_industries_sections",
+  "info": {
+    "displayName": "Industries Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    },
+    "industries": {
+      "type": "component",
+      "component": "elements.industry-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

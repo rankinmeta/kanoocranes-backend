@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_tag_titles",
+  "info": {
+    "displayName": "Tag Title"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

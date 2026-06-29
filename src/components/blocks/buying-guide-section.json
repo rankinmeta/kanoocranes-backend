@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_buying_guide_sections",
+  "info": {
+    "displayName": "Buying Guide Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "details": {
+      "type": "component",
+      "component": "elements.label-des",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

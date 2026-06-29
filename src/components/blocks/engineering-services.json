@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_engineering_services",
+  "info": {
+    "displayName": "Engineering Services"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "details": {
+      "type": "component",
+      "component": "elements.label-des",
+      "repeatable": true,
+      "required": true,
+      "max": 4
+    }
+  },
+  "config": {}
+}

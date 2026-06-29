@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "rental_hub_pages",
+  "info": {
+    "singularName": "rental-hub-page",
+    "pluralName": "rental-hub-pages",
+    "displayName": "Rental Hub Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "blocks.simple-hero",
+      "repeatable": false
+    },
+    "why_rent_from_us_section": {
+      "type": "component",
+      "component": "blocks.why-buy-from-us-section",
+      "repeatable": false
+    },
+    "sales_category_section": {
+      "type": "component",
+      "component": "blocks.sales-category-section",
+      "repeatable": false
+    },
+    "site_selection_section": {
+      "type": "component",
+      "component": "blocks.site-selection-section",
+      "repeatable": false
+    },
+    "featured_models_section": {
+      "type": "component",
+      "component": "blocks.featured-models-section",
+      "repeatable": false
+    },
+    "rental_benefit_section": {
+      "type": "component",
+      "component": "blocks.rental-benefit-section",
+      "repeatable": false
+    },
+    "engineering_support_section": {
+      "type": "component",
+      "component": "blocks.engineering-support-section",
+      "repeatable": false
+    },
+    "featured_projects_section": {
+      "type": "component",
+      "component": "blocks.featured-products-section",
+      "repeatable": false
+    },
+    "gallery_section": {
+      "type": "component",
+      "component": "blocks.gallery-section",
+      "repeatable": false
+    },
+    "testimonial_section": {
+      "type": "component",
+      "component": "blocks.testimonial-section",
+      "repeatable": false
+    },
+    "experts_section": {
+      "type": "component",
+      "component": "blocks.experts-section",
+      "repeatable": false
+    },
+    "related_resource_section": {
+      "type": "component",
+      "component": "blocks.resource-section",
+      "repeatable": false
+    },
+    "industry_expertise_section": {
+      "type": "component",
+      "component": "blocks.about-us-section",
+      "repeatable": false
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
+    }
+  }
+}

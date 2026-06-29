@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_site_selection_sections",
+  "info": {
+    "displayName": "Site Selection Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "site_selection_details": {
+      "type": "component",
+      "component": "elements.site-selection-details",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_footer_links",
+  "info": {
+    "displayName": "Footer Link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Quick Links",
+      "required": true
+    },
+    "link": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

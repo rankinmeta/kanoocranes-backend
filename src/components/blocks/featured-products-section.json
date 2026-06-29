@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_featured_products_sections",
+  "info": {
+    "displayName": "Featured Projects Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "projects": {
+      "type": "component",
+      "component": "elements.projects",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

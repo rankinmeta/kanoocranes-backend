@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_our_solutions_sections",
+  "info": {
+    "displayName": "Our Solutions Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    },
+    "our_solutions_card": {
+      "type": "component",
+      "component": "elements.our-solutions-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

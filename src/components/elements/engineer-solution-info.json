@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_engineer_solution_infos",
+  "info": {
+    "displayName": "Engineer Solution Info"
+  },
+  "options": {},
+  "attributes": {
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "infos": {
+      "type": "component",
+      "component": "elements.label",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

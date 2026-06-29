@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resources",
+  "info": {
+    "singularName": "resource",
+    "pluralName": "resources",
+    "displayName": "Resource"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "reading_time": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "resource_category": {
+      "type": "string",
+      "required": true
+    },
+    "resource_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::resource-type.resource-type"
+    },
+    "banner_title": {
+      "type": "string",
+      "required": true
+    },
+    "banner_description": {
+      "type": "text",
+      "required": true
+    },
+    "resource_content": {
+      "type": "blocks",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "card_banner_title": {
+      "type": "string",
+      "required": true
+    },
+    "card_banner_description": {
+      "type": "text",
+      "required": true
+    },
+    "card_banner_button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false,
+      "required": true
+    },
+    "related_resources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resource.resource"
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
+    },
+    "banner_button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}

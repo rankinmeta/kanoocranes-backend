@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_blocks_contact_details_sections",
+  "info": {
+    "displayName": "Contact Details Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "whatsapp": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_blocks_form_sections",
+  "info": {
+    "displayName": "Form Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "phone1": {
+      "type": "string",
+      "required": true
+    },
+    "phone2": {
+      "type": "string"
+    },
+    "working_days": {
+      "type": "string",
+      "required": true
+    },
+    "working_hours": {
+      "type": "string",
+      "required": true
+    },
+    "headquater_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "headquater": {
+      "type": "string",
+      "required": true
+    },
+    "headquater_address": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "form_title": {
+      "type": "string",
+      "required": true
+    },
+    "form_description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}
