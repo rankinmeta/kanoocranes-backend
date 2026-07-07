@@ -36,11 +36,6 @@
       "component": "blocks.featured-models-section",
       "repeatable": false
     },
-    "benefits_section": {
-      "type": "component",
-      "component": "blocks.benefits-section",
-      "repeatable": false
-    },
     "engineering_support_section": {
       "type": "component",
       "component": "blocks.engineering-support-section",
@@ -76,14 +71,24 @@
       "component": "blocks.about-us-section",
       "repeatable": false
     },
-    "related_resources_section": {
+    "related_resources": {
       "type": "component",
-      "component": "blocks.resource-section",
+      "component": "blocks.related-resources",
       "repeatable": false
     },
     "footer_cta_section": {
       "type": "component",
       "component": "blocks.footer-cta-section",
+      "repeatable": false
+    },
+    "ownership_benefits": {
+      "type": "component",
+      "component": "blocks.benefits-section-with-points",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
       "repeatable": false
     }
   }

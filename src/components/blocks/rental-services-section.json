@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_rental_services_sections",
+  "info": {
+    "displayName": "Rental Services Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false,
+      "required": true
+    },
+    "details": {
+      "type": "component",
+      "component": "elements.label-des",
+      "repeatable": true,
+      "max": 4
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

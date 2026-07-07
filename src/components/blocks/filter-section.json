@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_filter_sections",
+  "info": {
+    "displayName": "Filter Section"
+  },
+  "options": {},
+  "attributes": {
+    "tag_title": {
+      "type": "component",
+      "component": "elements.tag-title",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

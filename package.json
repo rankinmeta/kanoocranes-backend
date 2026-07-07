@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "new-server",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@strapi-community/plugin-seo": "^2.1.1",
-    "@strapi/plugin-cloud": "5.46.0",
-    "@strapi/plugin-users-permissions": "5.46.0",
-    "@strapi/strapi": "5.46.0",
+    "@strapi/plugin-cloud": "5.49.0",
+    "@strapi/plugin-users-permissions": "5.49.0",
+    "@strapi/strapi": "5.49.0",
     "pg": "8.20.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -32,11 +32,11 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=20.0.0 <=24.x.x",
+    "node": ">=20.0.0 <=26.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "37c4d5e2-edb6-4d5a-bc71-587c5b490209",
-    "installId": "17d9111eba11cadc2496a6e700277f4239df03b309e57a5d61072feb8c246d69"
+    "uuid": "90aa3618-a915-46f5-bdff-8a082de4eda6",
+    "installId": "beaf966bcc42905a55d16d6102e640a8f93acd4349217bd57084589b01f2bd13"
   }
 }

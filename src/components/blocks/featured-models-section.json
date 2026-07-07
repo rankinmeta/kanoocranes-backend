@@ -10,6 +10,11 @@
       "component": "elements.tag-title",
       "repeatable": false,
       "required": true
+    },
+    "models": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::model.model"
     }
   },
   "config": {}

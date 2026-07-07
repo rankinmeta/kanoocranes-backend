@@ -12,6 +12,16 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "button1": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "button2": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
     }
   },
   "config": {}

@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_open_graphs",
+  "info": {
+    "displayName": "openGraph"
+  },
+  "options": {},
+  "attributes": {
+    "ogTitle": {
+      "type": "string",
+      "maxLength": 70,
+      "required": true
+    },
+    "ogDescription": {
+      "type": "string",
+      "maxLength": 200,
+      "required": true
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ogUrl": {
+      "type": "string"
+    },
+    "ogType": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

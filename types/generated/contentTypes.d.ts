@@ -491,11 +491,206 @@ export interface ApiAboutUsPageAboutUsPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     team_section: Schema.Attribute.Component<'blocks.team-section', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     who_we_are: Schema.Attribute.Component<'blocks.about-us-section', false>;
+  };
+}
+
+export interface ApiCategoryRentalCategoryRental
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'category_rentals';
+  info: {
+    displayName: 'Category Rental';
+    pluralName: 'category-rentals';
+    singularName: 'category-rental';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.String & Schema.Attribute.Required;
+    crane_categories: Schema.Attribute.Component<
+      'blocks.sales-category-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    engineering_support_section: Schema.Attribute.Component<
+      'blocks.engineering-support-section',
+      false
+    >;
+    experts_section: Schema.Attribute.Component<
+      'blocks.experts-section',
+      false
+    >;
+    filter_section: Schema.Attribute.Component<'blocks.filter-section', false>;
+    footer_cta_section: Schema.Attribute.Component<
+      'blocks.footer-cta-section',
+      false
+    >;
+    gallery_section: Schema.Attribute.Component<
+      'blocks.gallery-section',
+      false
+    >;
+    hero: Schema.Attribute.Component<'blocks.simple-hero', false>;
+    industry_application: Schema.Attribute.Component<
+      'blocks.site-selection-section',
+      false
+    >;
+    info_section: Schema.Attribute.Component<'blocks.simple-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category-rental.category-rental'
+    > &
+      Schema.Attribute.Private;
+    ownership_benefits: Schema.Attribute.Component<
+      'blocks.simple-section',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    related_resources: Schema.Attribute.Component<
+      'blocks.related-resources',
+      false
+    >;
+    rental_services_section: Schema.Attribute.Component<
+      'blocks.rental-services-section',
+      false
+    >;
+    selection_guide: Schema.Attribute.Component<
+      'blocks.selection-guide-section',
+      false
+    >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'category'> & Schema.Attribute.Required;
+    testimonial_section: Schema.Attribute.Component<
+      'blocks.testimonial-section',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCategorySaleCategorySale
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'category_sales';
+  info: {
+    displayName: 'Category Sale';
+    pluralName: 'category-sales';
+    singularName: 'category-sale';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    benefits_section: Schema.Attribute.Component<
+      'blocks.benefits-section-with-points',
+      false
+    >;
+    brand_highlight: Schema.Attribute.Component<
+      'blocks.brand-highlight-section',
+      false
+    >;
+    buying_guide: Schema.Attribute.Component<
+      'blocks.buying-guide-section',
+      false
+    >;
+    category: Schema.Attribute.String & Schema.Attribute.Required;
+    crane_categories: Schema.Attribute.Component<
+      'blocks.sales-category-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    engineering_support_section: Schema.Attribute.Component<
+      'blocks.engineering-support-section',
+      false
+    >;
+    experts_section: Schema.Attribute.Component<
+      'blocks.experts-section',
+      false
+    >;
+    filter_section: Schema.Attribute.Component<'blocks.filter-section', false>;
+    footer_cta_section: Schema.Attribute.Component<
+      'blocks.footer-cta-section',
+      false
+    >;
+    gallery_section: Schema.Attribute.Component<
+      'blocks.gallery-section',
+      false
+    >;
+    hero: Schema.Attribute.Component<'blocks.simple-hero', false>;
+    industry_application: Schema.Attribute.Component<
+      'blocks.site-selection-section',
+      false
+    >;
+    info_section: Schema.Attribute.Component<'blocks.simple-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category-sale.category-sale'
+    > &
+      Schema.Attribute.Private;
+    ownership_benefits: Schema.Attribute.Component<
+      'blocks.simple-section',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    related_resources: Schema.Attribute.Component<
+      'blocks.related-resources',
+      false
+    >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'category'> & Schema.Attribute.Required;
+    testimonial_section: Schema.Attribute.Component<
+      'blocks.testimonial-section',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiContactFormContactForm extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_forms';
+  info: {
+    displayName: 'Contact Form';
+    pluralName: 'contact-forms';
+    singularName: 'contact-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyName: Schema.Attribute.String & Schema.Attribute.Required;
+    craneRequirement: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-form.contact-form'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    phone: Schema.Attribute.String & Schema.Attribute.Required;
+    projectType: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -517,6 +712,10 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    footer_cta_section: Schema.Attribute.Component<
+      'blocks.footer-cta-section',
+      false
+    >;
     form_section: Schema.Attribute.Component<'blocks.form-section', false>;
     hero: Schema.Attribute.Component<'blocks.simple-hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -527,6 +726,7 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     partners_section: Schema.Attribute.Component<'blocks.logo-cloud', false>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -629,6 +829,7 @@ export interface ApiEngSolutionsPageEngSolutionsPage
       'blocks.related-resources',
       false
     >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     sticky_cards: Schema.Attribute.Component<'blocks.simple-section', true>;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
@@ -725,14 +926,45 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     >;
     partners_section: Schema.Attribute.Component<'blocks.logo-cloud', false>;
     publishedAt: Schema.Attribute.DateTime;
-    resources_section: Schema.Attribute.Component<
-      'blocks.resource-section',
+    related_resources: Schema.Attribute.Component<
+      'blocks.related-resources',
       false
     >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false
     >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiManufacturerManufacturer
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'manufacturers';
+  info: {
+    displayName: 'Manufacturer';
+    pluralName: 'manufacturers';
+    singularName: 'manufacturer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::manufacturer.manufacturer'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -753,6 +985,10 @@ export interface ApiModelModel extends Struct.CollectionTypeSchema {
     applications_section: Schema.Attribute.Component<
       'blocks.site-selection-section',
       false
+    >;
+    crane_type: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::crane-type.crane-type'
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -776,11 +1012,19 @@ export interface ApiModelModel extends Struct.CollectionTypeSchema {
       'blocks.main-model-section',
       false
     >;
+    manufacturer: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::manufacturer.manufacturer'
+    >;
     model_name: Schema.Attribute.String & Schema.Attribute.Required;
     model_slug: Schema.Attribute.UID<'model_name'> & Schema.Attribute.Required;
     procurement_section: Schema.Attribute.Component<
       'blocks.simple-section',
       false
+    >;
+    project_type: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::project-type.project-type'
     >;
     projects_section: Schema.Attribute.Component<
       'blocks.projects-section',
@@ -795,6 +1039,7 @@ export interface ApiModelModel extends Struct.CollectionTypeSchema {
       'blocks.section-with-grid',
       false
     >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     technical_application: Schema.Attribute.Component<
       'blocks.section-with-sticky-cards',
       false
@@ -892,8 +1137,8 @@ export interface ApiRentalHubPageRentalHubPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    related_resource_section: Schema.Attribute.Component<
-      'blocks.resource-section',
+    related_resources: Schema.Attribute.Component<
+      'blocks.related-resources',
       false
     >;
     rental_benefit_section: Schema.Attribute.Component<
@@ -904,6 +1149,7 @@ export interface ApiRentalHubPageRentalHubPage extends Struct.SingleTypeSchema {
       'blocks.sales-category-section',
       false
     >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     site_selection_section: Schema.Attribute.Component<
       'blocks.site-selection-section',
       false
@@ -952,6 +1198,7 @@ export interface ApiResourceHubPageResourceHubPage
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     resources_list_title: Schema.Attribute.String & Schema.Attribute.Required;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -980,6 +1227,7 @@ export interface ApiResourceTypeResourceType
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'type'> & Schema.Attribute.Required;
     type: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1034,6 +1282,8 @@ export interface ApiResourceResource extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::resource-type.resource-type'
     >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1052,10 +1302,6 @@ export interface ApiSalesHubSalesHub extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    benefits_section: Schema.Attribute.Component<
-      'blocks.benefits-section',
-      false
-    >;
     brands_section: Schema.Attribute.Component<'blocks.brands-section', false>;
     buying_guide_section: Schema.Attribute.Component<
       'blocks.buying-guide-section',
@@ -1099,15 +1345,20 @@ export interface ApiSalesHubSalesHub extends Struct.SingleTypeSchema {
       'api::sales-hub.sales-hub'
     > &
       Schema.Attribute.Private;
+    ownership_benefits: Schema.Attribute.Component<
+      'blocks.benefits-section-with-points',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    related_resources_section: Schema.Attribute.Component<
-      'blocks.resource-section',
+    related_resources: Schema.Attribute.Component<
+      'blocks.related-resources',
       false
     >;
     sales_category_section: Schema.Attribute.Component<
       'blocks.sales-category-section',
       false
     >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false
@@ -1634,11 +1885,15 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us-page.about-us-page': ApiAboutUsPageAboutUsPage;
+      'api::category-rental.category-rental': ApiCategoryRentalCategoryRental;
+      'api::category-sale.category-sale': ApiCategorySaleCategorySale;
+      'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
       'api::crane-type.crane-type': ApiCraneTypeCraneType;
       'api::eng-solutions-page.eng-solutions-page': ApiEngSolutionsPageEngSolutionsPage;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::manufacturer.manufacturer': ApiManufacturerManufacturer;
       'api::model.model': ApiModelModel;
       'api::project-type.project-type': ApiProjectTypeProjectType;
       'api::rental-hub-page.rental-hub-page': ApiRentalHubPageRentalHubPage;

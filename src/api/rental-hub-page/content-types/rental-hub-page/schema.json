@@ -66,11 +66,6 @@
       "component": "blocks.experts-section",
       "repeatable": false
     },
-    "related_resource_section": {
-      "type": "component",
-      "component": "blocks.resource-section",
-      "repeatable": false
-    },
     "industry_expertise_section": {
       "type": "component",
       "component": "blocks.about-us-section",
@@ -79,6 +74,16 @@
     "footer_cta_section": {
       "type": "component",
       "component": "blocks.footer-cta-section",
+      "repeatable": false
+    },
+    "related_resources": {
+      "type": "component",
+      "component": "blocks.related-resources",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
       "repeatable": false
     }
   }

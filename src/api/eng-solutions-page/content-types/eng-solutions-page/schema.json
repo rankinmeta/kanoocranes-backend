@@ -80,6 +80,11 @@
       "type": "component",
       "component": "blocks.footer-cta-section",
       "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

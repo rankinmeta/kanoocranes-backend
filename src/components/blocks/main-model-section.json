@@ -5,26 +5,16 @@
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
     "short_description": {
       "type": "text",
       "required": true
     },
-    "crane_capacity": {
-      "type": "string"
-    },
-    "max_working_radius": {
-      "type": "string"
-    },
-    "max_lifting_height": {
-      "type": "string"
-    },
     "hook_height": {
       "type": "string"
-    },
-    "project_type": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::project-type.project-type"
     },
     "crane_configuration": {
       "type": "string"
@@ -50,10 +40,6 @@
         "images"
       ]
     },
-    "manufacturer": {
-      "type": "string",
-      "required": true
-    },
     "listingType": {
       "type": "enumeration",
       "required": true,
@@ -62,6 +48,18 @@
         "rent",
         "both"
       ]
+    },
+    "best_for": {
+      "type": "string"
+    },
+    "crane_capacity": {
+      "type": "integer"
+    },
+    "max_working_radius": {
+      "type": "integer"
+    },
+    "max_lifting_height": {
+      "type": "integer"
     }
   },
   "config": {}

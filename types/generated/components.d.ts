@@ -34,6 +34,36 @@ export interface BlocksBenefitsSection extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    tag_title: Schema.Attribute.Component<'elements.tag-title', false> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksBenefitsSectionWithPoints
+  extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_benefits_section_with_points';
+  info: {
+    displayName: 'Benefits Section with Points';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
+    points: Schema.Attribute.Component<'elements.label', true> &
+      Schema.Attribute.Required;
+    tag_title: Schema.Attribute.Component<'elements.tag-title', false> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksBrandHighlightSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_brand_highlight_sections';
+  info: {
+    displayName: 'Brand Highlight Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     tag_title: Schema.Attribute.Component<'elements.tag-title', false> &
       Schema.Attribute.Required;
   };
@@ -263,6 +293,7 @@ export interface BlocksFeaturedModelsSection extends Struct.ComponentSchema {
     displayName: 'Featured Models Section';
   };
   attributes: {
+    models: Schema.Attribute.Relation<'oneToMany', 'api::model.model'>;
     tag_title: Schema.Attribute.Component<'elements.tag-title', false> &
       Schema.Attribute.Required;
   };
@@ -276,6 +307,16 @@ export interface BlocksFeaturedProductsSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     projects: Schema.Attribute.Component<'elements.projects', true>;
+    tag_title: Schema.Attribute.Component<'elements.tag-title', false>;
+  };
+}
+
+export interface BlocksFilterSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_filter_sections';
+  info: {
+    displayName: 'Filter Section';
+  };
+  attributes: {
     tag_title: Schema.Attribute.Component<'elements.tag-title', false>;
   };
 }
@@ -366,26 +407,23 @@ export interface BlocksMainModelSection extends Struct.ComponentSchema {
     displayName: 'Main Model Section';
   };
   attributes: {
-    crane_capacity: Schema.Attribute.String;
+    best_for: Schema.Attribute.String;
+    crane_capacity: Schema.Attribute.Integer;
     crane_configuration: Schema.Attribute.String;
     hook_height: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     listingType: Schema.Attribute.Enumeration<['sale', 'rent', 'both']> &
       Schema.Attribute.Required;
-    manufacturer: Schema.Attribute.String & Schema.Attribute.Required;
-    max_lifting_height: Schema.Attribute.String;
-    max_working_radius: Schema.Attribute.String;
+    max_lifting_height: Schema.Attribute.Integer;
+    max_working_radius: Schema.Attribute.Integer;
     model_short_name: Schema.Attribute.String & Schema.Attribute.Required;
     model_specifications: Schema.Attribute.Component<
       'elements.specifications',
       true
     >;
     overview: Schema.Attribute.Text & Schema.Attribute.Required;
-    project_type: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::project-type.project-type'
-    >;
     short_description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -458,6 +496,25 @@ export interface BlocksRentalBenefitSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksRentalServicesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_rental_services_sections';
+  info: {
+    displayName: 'Rental Services Section';
+  };
+  attributes: {
+    details: Schema.Attribute.Component<'elements.label-des', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    tag_title: Schema.Attribute.Component<'elements.tag-title', false> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksResourceSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_resource_sections';
   info: {
@@ -522,12 +579,29 @@ export interface BlocksSectionWithStickyCards extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksSelectionGuideSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_selection_guide_sections';
+  info: {
+    displayName: 'Selection Guide Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    details: Schema.Attribute.Component<'elements.label-des', true> &
+      Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    tag_title: Schema.Attribute.Component<'elements.tag-title', false> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksSimpleHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_simple_heroes';
   info: {
     displayName: 'Simple Hero';
   };
   attributes: {
+    button1: Schema.Attribute.Component<'elements.link', false>;
+    button2: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -752,6 +826,7 @@ export interface ElementsHeader extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Get Quote'>;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    logo_color: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
@@ -994,12 +1069,63 @@ export interface ElementsUnitCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedOpenGraph extends Struct.ComponentSchema {
+  collectionName: 'components_shared_open_graphs';
+  info: {
+    displayName: 'openGraph';
+  };
+  attributes: {
+    ogDescription: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    ogImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    ogTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 70;
+      }>;
+    ogType: Schema.Attribute.String;
+    ogUrl: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    displayName: 'seo';
+  };
+  attributes: {
+    canonicalURL: Schema.Attribute.String;
+    keywords: Schema.Attribute.Text;
+    metaDescription: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+        minLength: 50;
+      }>;
+    metaImage: Schema.Attribute.Media<'images'>;
+    metaRobots: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    metaViewport: Schema.Attribute.String;
+    openGraph: Schema.Attribute.Component<'shared.open-graph', false>;
+    structuredData: Schema.Attribute.JSON;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.about-kanoo-group': BlocksAboutKanooGroup;
       'blocks.about-us-section': BlocksAboutUsSection;
       'blocks.benefits-section': BlocksBenefitsSection;
+      'blocks.benefits-section-with-points': BlocksBenefitsSectionWithPoints;
+      'blocks.brand-highlight-section': BlocksBrandHighlightSection;
       'blocks.brands-section': BlocksBrandsSection;
       'blocks.business-units-section': BlocksBusinessUnitsSection;
       'blocks.buying-guide-section': BlocksBuyingGuideSection;
@@ -1015,6 +1141,7 @@ declare module '@strapi/strapi' {
       'blocks.experts-section': BlocksExpertsSection;
       'blocks.featured-models-section': BlocksFeaturedModelsSection;
       'blocks.featured-products-section': BlocksFeaturedProductsSection;
+      'blocks.filter-section': BlocksFilterSection;
       'blocks.footer-cta-section': BlocksFooterCtaSection;
       'blocks.form-section': BlocksFormSection;
       'blocks.gallery-section': BlocksGallerySection;
@@ -1027,10 +1154,12 @@ declare module '@strapi/strapi' {
       'blocks.related-model': BlocksRelatedModel;
       'blocks.related-resources': BlocksRelatedResources;
       'blocks.rental-benefit-section': BlocksRentalBenefitSection;
+      'blocks.rental-services-section': BlocksRentalServicesSection;
       'blocks.resource-section': BlocksResourceSection;
       'blocks.sales-category-section': BlocksSalesCategorySection;
       'blocks.section-with-grid': BlocksSectionWithGrid;
       'blocks.section-with-sticky-cards': BlocksSectionWithStickyCards;
+      'blocks.selection-guide-section': BlocksSelectionGuideSection;
       'blocks.simple-hero': BlocksSimpleHero;
       'blocks.simple-section': BlocksSimpleSection;
       'blocks.site-selection-section': BlocksSiteSelectionSection;
@@ -1066,6 +1195,8 @@ declare module '@strapi/strapi' {
       'elements.team-member': ElementsTeamMember;
       'elements.testimonial': ElementsTestimonial;
       'elements.unit-card': ElementsUnitCard;
+      'shared.open-graph': SharedOpenGraph;
+      'shared.seo': SharedSeo;
     }
   }
 }

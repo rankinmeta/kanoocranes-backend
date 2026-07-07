@@ -1,0 +1,104 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_sales",
+  "info": {
+    "singularName": "category-sale",
+    "pluralName": "category-sales",
+    "displayName": "Category Sale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "category",
+      "required": true
+    },
+    "hero": {
+      "type": "component",
+      "component": "blocks.simple-hero",
+      "repeatable": false
+    },
+    "filter_section": {
+      "type": "component",
+      "component": "blocks.filter-section",
+      "repeatable": false
+    },
+    "info_section": {
+      "type": "component",
+      "component": "blocks.simple-section",
+      "repeatable": false
+    },
+    "benefits_section": {
+      "type": "component",
+      "component": "blocks.benefits-section-with-points",
+      "repeatable": false
+    },
+    "brand_highlight": {
+      "type": "component",
+      "component": "blocks.brand-highlight-section",
+      "repeatable": false
+    },
+    "crane_categories": {
+      "type": "component",
+      "component": "blocks.sales-category-section",
+      "repeatable": false
+    },
+    "buying_guide": {
+      "type": "component",
+      "component": "blocks.buying-guide-section",
+      "repeatable": false
+    },
+    "industry_application": {
+      "type": "component",
+      "component": "blocks.site-selection-section",
+      "repeatable": false
+    },
+    "gallery_section": {
+      "type": "component",
+      "component": "blocks.gallery-section",
+      "repeatable": false
+    },
+    "engineering_support_section": {
+      "type": "component",
+      "component": "blocks.engineering-support-section",
+      "repeatable": false
+    },
+    "ownership_benefits": {
+      "type": "component",
+      "component": "blocks.simple-section",
+      "repeatable": false
+    },
+    "testimonial_section": {
+      "type": "component",
+      "component": "blocks.testimonial-section",
+      "repeatable": false
+    },
+    "experts_section": {
+      "type": "component",
+      "component": "blocks.experts-section",
+      "repeatable": false
+    },
+    "related_resources": {
+      "type": "component",
+      "component": "blocks.related-resources",
+      "repeatable": false
+    },
+    "footer_cta_section": {
+      "type": "component",
+      "component": "blocks.footer-cta-section",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}
