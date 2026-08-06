@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_recommended_cranes",
+  "info": {
+    "displayName": "Recommended Cranes"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "models": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::model.model"
+    }
+  },
+  "config": {}
+}

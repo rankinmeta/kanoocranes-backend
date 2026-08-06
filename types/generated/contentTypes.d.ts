@@ -1137,6 +1137,10 @@ export interface ApiRentalHubPageRentalHubPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    recommended_cranes: Schema.Attribute.Component<
+      'blocks.recommended-cranes',
+      false
+    >;
     related_resources: Schema.Attribute.Component<
       'blocks.related-resources',
       false
@@ -1350,6 +1354,10 @@ export interface ApiSalesHubSalesHub extends Struct.SingleTypeSchema {
       false
     >;
     publishedAt: Schema.Attribute.DateTime;
+    recommended_cranes: Schema.Attribute.Component<
+      'blocks.recommended-cranes',
+      false
+    >;
     related_resources: Schema.Attribute.Component<
       'blocks.related-resources',
       false

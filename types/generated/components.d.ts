@@ -460,6 +460,17 @@ export interface BlocksProjectsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksRecommendedCranes extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_recommended_cranes';
+  info: {
+    displayName: 'Recommended Cranes';
+  };
+  attributes: {
+    models: Schema.Attribute.Relation<'oneToMany', 'api::model.model'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksRelatedModel extends Struct.ComponentSchema {
   collectionName: 'components_blocks_related_models';
   info: {
@@ -1151,6 +1162,7 @@ declare module '@strapi/strapi' {
       'blocks.main-model-section': BlocksMainModelSection;
       'blocks.our-solutions-section': BlocksOurSolutionsSection;
       'blocks.projects-section': BlocksProjectsSection;
+      'blocks.recommended-cranes': BlocksRecommendedCranes;
       'blocks.related-model': BlocksRelatedModel;
       'blocks.related-resources': BlocksRelatedResources;
       'blocks.rental-benefit-section': BlocksRentalBenefitSection;

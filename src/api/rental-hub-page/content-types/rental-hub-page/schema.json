@@ -16,6 +16,11 @@
       "component": "blocks.simple-hero",
       "repeatable": false
     },
+    "recommended_cranes": {
+      "type": "component",
+      "component": "blocks.recommended-cranes",
+      "repeatable": false
+    },
     "why_rent_from_us_section": {
       "type": "component",
       "component": "blocks.why-buy-from-us-section",
