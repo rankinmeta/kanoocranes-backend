@@ -25,9 +25,9 @@
       "component": "blocks.simple-hero",
       "repeatable": false
     },
-    "filter_section": {
+    "cranes_section": {
       "type": "component",
-      "component": "blocks.filter-section",
+      "component": "blocks.related-model",
       "repeatable": false
     },
     "info_section": {

@@ -517,6 +517,7 @@ export interface ApiCategoryRentalCategoryRental
       'blocks.sales-category-section',
       false
     >;
+    cranes_section: Schema.Attribute.Component<'blocks.related-model', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -528,7 +529,6 @@ export interface ApiCategoryRentalCategoryRental
       'blocks.experts-section',
       false
     >;
-    filter_section: Schema.Attribute.Component<'blocks.filter-section', false>;
     footer_cta_section: Schema.Attribute.Component<
       'blocks.footer-cta-section',
       false
@@ -607,6 +607,7 @@ export interface ApiCategorySaleCategorySale
       'blocks.sales-category-section',
       false
     >;
+    cranes_section: Schema.Attribute.Component<'blocks.related-model', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -618,7 +619,6 @@ export interface ApiCategorySaleCategorySale
       'blocks.experts-section',
       false
     >;
-    filter_section: Schema.Attribute.Component<'blocks.filter-section', false>;
     footer_cta_section: Schema.Attribute.Component<
       'blocks.footer-cta-section',
       false
