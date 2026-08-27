@@ -959,28 +959,6 @@ export interface ElementsProjects extends Struct.ComponentSchema {
     displayName: 'Projects';
   };
   attributes: {
-    country: Schema.Attribute.Enumeration<
-      [
-        'iran',
-        'turkiye',
-        'cyprus',
-        'egypt',
-        'iraq',
-        'jordan',
-        'syria',
-        'oman',
-        'uae',
-        'qatar',
-        'saudi-arabia',
-        'yemen',
-        'lebanon',
-        'bahrain',
-        'kuwait',
-        'israel',
-        'palestine',
-      ]
-    > &
-      Schema.Attribute.Required;
     details: Schema.Attribute.Component<'elements.label-des', true> &
       Schema.Attribute.SetMinMax<
         {

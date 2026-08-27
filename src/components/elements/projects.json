@@ -27,29 +27,6 @@
       "component": "elements.label-des",
       "repeatable": true,
       "max": 3
-    },
-    "country": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "iran",
-        "turkiye",
-        "cyprus",
-        "egypt",
-        "iraq",
-        "jordan",
-        "syria",
-        "oman",
-        "uae",
-        "qatar",
-        "saudi-arabia",
-        "yemen",
-        "lebanon",
-        "bahrain",
-        "kuwait",
-        "israel",
-        "palestine"
-      ]
     }
   },
   "config": {}
