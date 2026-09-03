@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_blocks_table_sections",
+  "info": {
+    "displayName": "Table Section"
+  },
+  "options": {},
+  "attributes": {
+    "model": {
+      "type": "string"
+    },
+    "reach": {
+      "type": "string"
+    },
+    "tip_load": {
+      "type": "string"
+    },
+    "maximum_load": {
+      "type": "string"
+    },
+    "fem_1001": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "en_14439_c25": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

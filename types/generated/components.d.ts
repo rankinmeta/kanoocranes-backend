@@ -328,7 +328,7 @@ export interface BlocksFooterCtaSection extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -644,6 +644,21 @@ export interface BlocksSiteSelectionSection extends Struct.ComponentSchema {
     > &
       Schema.Attribute.Required;
     tag_title: Schema.Attribute.Component<'elements.tag-title', false>;
+  };
+}
+
+export interface BlocksTableSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_table_sections';
+  info: {
+    displayName: 'Table Section';
+  };
+  attributes: {
+    en_14439_c25: Schema.Attribute.Media<'files'>;
+    fem_1001: Schema.Attribute.Media<'files'>;
+    maximum_load: Schema.Attribute.String;
+    model: Schema.Attribute.String;
+    reach: Schema.Attribute.String;
+    tip_load: Schema.Attribute.String;
   };
 }
 
@@ -1153,6 +1168,7 @@ declare module '@strapi/strapi' {
       'blocks.simple-hero': BlocksSimpleHero;
       'blocks.simple-section': BlocksSimpleSection;
       'blocks.site-selection-section': BlocksSiteSelectionSection;
+      'blocks.table-section': BlocksTableSection;
       'blocks.team-section': BlocksTeamSection;
       'blocks.testimonial-section': BlocksTestimonialSection;
       'blocks.why-buy-from-us-section': BlocksWhyBuyFromUsSection;

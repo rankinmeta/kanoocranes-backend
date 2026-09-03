@@ -16,6 +16,11 @@
       "component": "blocks.simple-hero",
       "repeatable": false
     },
+    "experts_section": {
+      "type": "component",
+      "component": "blocks.experts-section",
+      "repeatable": false
+    },
     "contact_details": {
       "type": "component",
       "component": "blocks.contact-details-section",

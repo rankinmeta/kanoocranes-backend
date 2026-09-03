@@ -99,6 +99,11 @@
       "type": "component",
       "component": "shared.seo",
       "repeatable": false
+    },
+    "table_section": {
+      "type": "component",
+      "component": "blocks.table-section",
+      "repeatable": true
     }
   }
 }

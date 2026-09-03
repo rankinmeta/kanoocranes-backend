@@ -568,6 +568,7 @@ export interface ApiCategoryRentalCategoryRental
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'category'> & Schema.Attribute.Required;
+    table_section: Schema.Attribute.Component<'blocks.table-section', true>;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false
@@ -650,6 +651,7 @@ export interface ApiCategorySaleCategorySale
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'category'> & Schema.Attribute.Required;
+    table_section: Schema.Attribute.Component<'blocks.table-section', true>;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false
@@ -712,6 +714,10 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    experts_section: Schema.Attribute.Component<
+      'blocks.experts-section',
+      false
+    >;
     footer_cta_section: Schema.Attribute.Component<
       'blocks.footer-cta-section',
       false
@@ -835,6 +841,40 @@ export interface ApiEngSolutionsPageEngSolutionsPage
       'blocks.testimonial-section',
       false
     >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGalleryPageGalleryPage extends Struct.SingleTypeSchema {
+  collectionName: 'gallery_pages';
+  info: {
+    displayName: 'Gallery page';
+    pluralName: 'gallery-pages';
+    singularName: 'gallery-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gallery-page.gallery-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    tag_title: Schema.Attribute.Component<'elements.tag-title', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1158,6 +1198,7 @@ export interface ApiRentalHubPageRentalHubPage extends Struct.SingleTypeSchema {
       'blocks.site-selection-section',
       false
     >;
+    table_section: Schema.Attribute.Component<'blocks.table-section', true>;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false
@@ -1367,6 +1408,7 @@ export interface ApiSalesHubSalesHub extends Struct.SingleTypeSchema {
       false
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    table_section: Schema.Attribute.Component<'blocks.table-section', true>;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false
@@ -1899,6 +1941,7 @@ declare module '@strapi/strapi' {
       'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
       'api::crane-type.crane-type': ApiCraneTypeCraneType;
       'api::eng-solutions-page.eng-solutions-page': ApiEngSolutionsPageEngSolutionsPage;
+      'api::gallery-page.gallery-page': ApiGalleryPageGalleryPage;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::manufacturer.manufacturer': ApiManufacturerManufacturer;
