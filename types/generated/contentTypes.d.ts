@@ -768,6 +768,37 @@ export interface ApiCraneTypeCraneType extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEmailSubscribeEmailSubscribe
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'email_subscribes';
+  info: {
+    displayName: 'Email Subscribe';
+    pluralName: 'email-subscribes';
+    singularName: 'email-subscribe';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::email-subscribe.email-subscribe'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEngSolutionsPageEngSolutionsPage
   extends Struct.SingleTypeSchema {
   collectionName: 'eng_solutions_pages';
@@ -1940,6 +1971,7 @@ declare module '@strapi/strapi' {
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
       'api::crane-type.crane-type': ApiCraneTypeCraneType;
+      'api::email-subscribe.email-subscribe': ApiEmailSubscribeEmailSubscribe;
       'api::eng-solutions-page.eng-solutions-page': ApiEngSolutionsPageEngSolutionsPage;
       'api::gallery-page.gallery-page': ApiGalleryPageGalleryPage;
       'api::global.global': ApiGlobalGlobal;
