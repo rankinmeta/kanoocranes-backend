@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_buy_menus",
+  "info": {
+    "displayName": "Buy Menu"
+  },
+  "options": {},
+  "attributes": {
+    "menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category-sale.category-sale"
+    },
+    "sub_menus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category-sale.category-sale"
+    }
+  },
+  "config": {}
+}

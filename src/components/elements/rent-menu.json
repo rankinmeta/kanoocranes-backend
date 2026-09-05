@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_rent_menus",
+  "info": {
+    "displayName": "Rent Menu"
+  },
+  "options": {},
+  "attributes": {
+    "menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category-rental.category-rental"
+    },
+    "sub_menus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category-rental.category-rental"
+    }
+  },
+  "config": {}
+}

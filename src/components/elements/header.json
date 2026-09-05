@@ -25,6 +25,11 @@
       "type": "string",
       "default": "Get Quote",
       "required": true
+    },
+    "menu_links": {
+      "type": "component",
+      "component": "blocks.menu-items",
+      "repeatable": false
     }
   },
   "config": {}

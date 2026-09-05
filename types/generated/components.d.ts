@@ -427,6 +427,17 @@ export interface BlocksMainModelSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksMenuItems extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_menu_items';
+  info: {
+    displayName: 'Menu Items';
+  };
+  attributes: {
+    buy_cranes_menu: Schema.Attribute.Component<'elements.buy-menu', true>;
+    rent_cranes_menu: Schema.Attribute.Component<'elements.rent-menu', true>;
+  };
+}
+
 export interface BlocksOurSolutionsSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_our_solutions_sections';
   info: {
@@ -724,6 +735,23 @@ export interface ElementsBrandCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsBuyMenu extends Struct.ComponentSchema {
+  collectionName: 'components_elements_buy_menus';
+  info: {
+    displayName: 'Buy Menu';
+  };
+  attributes: {
+    menu: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::category-sale.category-sale'
+    >;
+    sub_menus: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category-sale.category-sale'
+    >;
+  };
+}
+
 export interface ElementsCertificate extends Struct.ComponentSchema {
   collectionName: 'components_elements_certificates';
   info: {
@@ -853,6 +881,7 @@ export interface ElementsHeader extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'Get Quote'>;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     logo_color: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    menu_links: Schema.Attribute.Component<'blocks.menu-items', false>;
   };
 }
 
@@ -942,6 +971,23 @@ export interface ElementsLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsMenu extends Struct.ComponentSchema {
+  collectionName: 'components_elements_menus';
+  info: {
+    displayName: 'Menu';
+  };
+  attributes: {
+    menu: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::category-rental.category-rental'
+    >;
+    sub_menu: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category-rental.category-rental'
+    >;
+  };
+}
+
 export interface ElementsOurSolutionsCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_our_solutions_cards';
   info: {
@@ -984,6 +1030,23 @@ export interface ElementsProjects extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     link: Schema.Attribute.Component<'elements.link', false>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsRentMenu extends Struct.ComponentSchema {
+  collectionName: 'components_elements_rent_menus';
+  info: {
+    displayName: 'Rent Menu';
+  };
+  attributes: {
+    menu: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::category-rental.category-rental'
+    >;
+    sub_menus: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category-rental.category-rental'
+    >;
   };
 }
 
@@ -1153,6 +1216,7 @@ declare module '@strapi/strapi' {
       'blocks.industries-section': BlocksIndustriesSection;
       'blocks.logo-cloud': BlocksLogoCloud;
       'blocks.main-model-section': BlocksMainModelSection;
+      'blocks.menu-items': BlocksMenuItems;
       'blocks.our-solutions-section': BlocksOurSolutionsSection;
       'blocks.projects-section': BlocksProjectsSection;
       'blocks.recommended-cranes': BlocksRecommendedCranes;
@@ -1174,6 +1238,7 @@ declare module '@strapi/strapi' {
       'blocks.why-buy-from-us-section': BlocksWhyBuyFromUsSection;
       'elements.accordion': ElementsAccordion;
       'elements.brand-card': ElementsBrandCard;
+      'elements.buy-menu': ElementsBuyMenu;
       'elements.certificate': ElementsCertificate;
       'elements.contact-link': ElementsContactLink;
       'elements.cover': ElementsCover;
@@ -1191,9 +1256,11 @@ declare module '@strapi/strapi' {
       'elements.label': ElementsLabel;
       'elements.label-des': ElementsLabelDes;
       'elements.link': ElementsLink;
+      'elements.menu': ElementsMenu;
       'elements.our-solutions-card': ElementsOurSolutionsCard;
       'elements.project-card': ElementsProjectCard;
       'elements.projects': ElementsProjects;
+      'elements.rent-menu': ElementsRentMenu;
       'elements.resource-card': ElementsResourceCard;
       'elements.site-selection-details': ElementsSiteSelectionDetails;
       'elements.specifications': ElementsSpecifications;

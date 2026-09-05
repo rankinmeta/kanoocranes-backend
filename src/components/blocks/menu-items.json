@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_menu_items",
+  "info": {
+    "displayName": "Menu Items"
+  },
+  "options": {},
+  "attributes": {
+    "rent_cranes_menu": {
+      "type": "component",
+      "component": "elements.rent-menu",
+      "repeatable": true
+    },
+    "buy_cranes_menu": {
+      "type": "component",
+      "component": "elements.buy-menu",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
