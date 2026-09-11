@@ -19,8 +19,7 @@
       "type": "component",
       "component": "elements.label-des",
       "repeatable": true,
-      "required": true,
-      "max": 4
+      "required": true
     }
   },
   "config": {}

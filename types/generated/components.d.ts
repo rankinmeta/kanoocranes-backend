@@ -196,13 +196,7 @@ export interface BlocksEngineeringServices extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     details: Schema.Attribute.Component<'elements.label-des', true> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 4;
-        },
-        number
-      >;
+      Schema.Attribute.Required;
     tag_title: Schema.Attribute.Component<'elements.tag-title', false> &
       Schema.Attribute.Required;
   };
