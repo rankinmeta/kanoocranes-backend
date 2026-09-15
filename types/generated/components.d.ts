@@ -154,6 +154,17 @@ export interface BlocksCraneSelectorSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksCraneSeriesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_crane_series_sections';
+  info: {
+    displayName: 'Crane Series Section';
+  };
+  attributes: {
+    crane_series: Schema.Attribute.Component<'elements.table-details', false>;
+    table: Schema.Attribute.Component<'blocks.table-section', true>;
+  };
+}
+
 export interface BlocksDownloadSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_download_sections';
   info: {
@@ -1081,6 +1092,21 @@ export interface ElementsSpecifications extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsTableDetails extends Struct.ComponentSchema {
+  collectionName: 'components_elements_table_details';
+  info: {
+    displayName: 'Table Details';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    img_placement: Schema.Attribute.Enumeration<['left', 'right']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'left'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsTagTitle extends Struct.ComponentSchema {
   collectionName: 'components_elements_tag_titles';
   info: {
@@ -1193,6 +1219,7 @@ declare module '@strapi/strapi' {
       'blocks.certification-section': BlocksCertificationSection;
       'blocks.contact-details-section': BlocksContactDetailsSection;
       'blocks.crane-selector-section': BlocksCraneSelectorSection;
+      'blocks.crane-series-section': BlocksCraneSeriesSection;
       'blocks.download-section': BlocksDownloadSection;
       'blocks.engineering-approach-section': BlocksEngineeringApproachSection;
       'blocks.engineering-services': BlocksEngineeringServices;
@@ -1258,6 +1285,7 @@ declare module '@strapi/strapi' {
       'elements.resource-card': ElementsResourceCard;
       'elements.site-selection-details': ElementsSiteSelectionDetails;
       'elements.specifications': ElementsSpecifications;
+      'elements.table-details': ElementsTableDetails;
       'elements.tag-title': ElementsTagTitle;
       'elements.team-member': ElementsTeamMember;
       'elements.testimonial': ElementsTestimonial;

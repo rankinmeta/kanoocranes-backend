@@ -28,7 +28,7 @@
     "cranes_section": {
       "type": "component",
       "component": "blocks.related-model",
-      "repeatable": false
+      "repeatable": true
     },
     "info_section": {
       "type": "component",
@@ -100,9 +100,9 @@
       "component": "shared.seo",
       "repeatable": false
     },
-    "table_section": {
+    "crane_series_section": {
       "type": "component",
-      "component": "blocks.table-section",
+      "component": "blocks.crane-series-section",
       "repeatable": true
     }
   }

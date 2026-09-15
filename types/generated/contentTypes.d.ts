@@ -608,7 +608,11 @@ export interface ApiCategorySaleCategorySale
       'blocks.sales-category-section',
       false
     >;
-    cranes_section: Schema.Attribute.Component<'blocks.related-model', false>;
+    crane_series_section: Schema.Attribute.Component<
+      'blocks.crane-series-section',
+      true
+    >;
+    cranes_section: Schema.Attribute.Component<'blocks.related-model', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -651,7 +655,6 @@ export interface ApiCategorySaleCategorySale
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'category'> & Schema.Attribute.Required;
-    table_section: Schema.Attribute.Component<'blocks.table-section', true>;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false

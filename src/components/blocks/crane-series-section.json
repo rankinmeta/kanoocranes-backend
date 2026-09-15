@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_crane_series_sections",
+  "info": {
+    "displayName": "Crane Series Section"
+  },
+  "options": {},
+  "attributes": {
+    "crane_series": {
+      "type": "component",
+      "component": "elements.table-details",
+      "repeatable": false
+    },
+    "table": {
+      "type": "component",
+      "component": "blocks.table-section",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
