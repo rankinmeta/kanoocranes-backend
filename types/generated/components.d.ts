@@ -413,14 +413,14 @@ export interface BlocksMainModelSection extends Struct.ComponentSchema {
   };
   attributes: {
     best_for: Schema.Attribute.String;
-    crane_capacity: Schema.Attribute.Integer;
+    crane_capacity: Schema.Attribute.Decimal;
     crane_configuration: Schema.Attribute.String;
     hook_height: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     listingType: Schema.Attribute.Enumeration<['sale', 'rent', 'both']> &
       Schema.Attribute.Required;
-    max_lifting_height: Schema.Attribute.Integer;
-    max_working_radius: Schema.Attribute.Integer;
+    max_lifting_height: Schema.Attribute.Decimal;
+    max_working_radius: Schema.Attribute.Decimal;
     model_short_name: Schema.Attribute.String & Schema.Attribute.Required;
     model_specifications: Schema.Attribute.Component<
       'elements.specifications',

@@ -53,13 +53,13 @@
       "type": "string"
     },
     "crane_capacity": {
-      "type": "integer"
+      "type": "decimal"
     },
     "max_working_radius": {
-      "type": "integer"
+      "type": "decimal"
     },
     "max_lifting_height": {
-      "type": "integer"
+      "type": "decimal"
     }
   },
   "config": {}
