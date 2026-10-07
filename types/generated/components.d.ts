@@ -161,6 +161,10 @@ export interface BlocksCraneSeriesSection extends Struct.ComponentSchema {
   };
   attributes: {
     crane_series: Schema.Attribute.Component<'elements.table-details', false>;
+    custom_table: Schema.Attribute.Component<
+      'elements.custom-table-section',
+      true
+    >;
     table: Schema.Attribute.Component<'blocks.table-section', true>;
   };
 }
@@ -798,6 +802,25 @@ export interface ElementsCover extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsCustomTableSection extends Struct.ComponentSchema {
+  collectionName: 'components_elements_custom_table_sections';
+  info: {
+    displayName: 'Custom Table Section';
+  };
+  attributes: {
+    brochure: Schema.Attribute.Media<'files'>;
+    factsheet: Schema.Attribute.Media<'files'>;
+    lifting_capacity: Schema.Attribute.String;
+    lifting_height: Schema.Attribute.String;
+    max_lifting_height: Schema.Attribute.String;
+    max_load: Schema.Attribute.String;
+    max_radius: Schema.Attribute.String;
+    model: Schema.Attribute.String;
+    tip_load: Schema.Attribute.String;
+    tower_height: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsDownloadCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_download_cards';
   info: {
@@ -1264,6 +1287,7 @@ declare module '@strapi/strapi' {
       'elements.certificate': ElementsCertificate;
       'elements.contact-link': ElementsContactLink;
       'elements.cover': ElementsCover;
+      'elements.custom-table-section': ElementsCustomTableSection;
       'elements.download-card': ElementsDownloadCard;
       'elements.engineer-solution-info': ElementsEngineerSolutionInfo;
       'elements.es-card': ElementsEsCard;

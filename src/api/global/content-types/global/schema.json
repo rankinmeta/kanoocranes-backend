@@ -20,6 +20,10 @@
       "type": "component",
       "component": "elements.footer",
       "repeatable": false
+    },
+    "whatsapp_number": {
+      "type": "string",
+      "required": true
     }
   }
 }

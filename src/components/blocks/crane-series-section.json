@@ -14,6 +14,11 @@
       "type": "component",
       "component": "blocks.table-section",
       "repeatable": true
+    },
+    "custom_table": {
+      "type": "component",
+      "component": "elements.custom-table-section",
+      "repeatable": true
     }
   },
   "config": {}

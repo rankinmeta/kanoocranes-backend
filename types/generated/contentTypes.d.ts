@@ -941,6 +941,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    whatsapp_number: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -1233,6 +1234,7 @@ export interface ApiRentalHubPageRentalHubPage extends Struct.SingleTypeSchema {
       false
     >;
     table_section: Schema.Attribute.Component<'blocks.table-section', true>;
+    table_section_heading: Schema.Attribute.String;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false
@@ -1443,6 +1445,7 @@ export interface ApiSalesHubSalesHub extends Struct.SingleTypeSchema {
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     table_section: Schema.Attribute.Component<'blocks.table-section', true>;
+    table_section_heading: Schema.Attribute.String;
     testimonial_section: Schema.Attribute.Component<
       'blocks.testimonial-section',
       false

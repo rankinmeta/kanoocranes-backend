@@ -100,6 +100,9 @@
       "type": "component",
       "component": "blocks.table-section",
       "repeatable": true
+    },
+    "table_section_heading": {
+      "type": "string"
     }
   }
 }

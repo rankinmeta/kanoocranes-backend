@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_elements_custom_table_sections",
+  "info": {
+    "displayName": "Custom Table Section"
+  },
+  "options": {},
+  "attributes": {
+    "model": {
+      "type": "string"
+    },
+    "max_lifting_height": {
+      "type": "string"
+    },
+    "max_load": {
+      "type": "string"
+    },
+    "tip_load": {
+      "type": "string"
+    },
+    "max_radius": {
+      "type": "string"
+    },
+    "lifting_height": {
+      "type": "string"
+    },
+    "tower_height": {
+      "type": "string"
+    },
+    "lifting_capacity": {
+      "type": "string"
+    },
+    "brochure": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "factsheet": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}
