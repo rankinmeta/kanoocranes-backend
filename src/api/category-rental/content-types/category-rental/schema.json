@@ -99,6 +99,11 @@
       "type": "component",
       "component": "blocks.table-section",
       "repeatable": true
+    },
+    "crane_types_listing": {
+      "type": "component",
+      "component": "elements.crane-types-listing",
+      "repeatable": true
     }
   }
 }

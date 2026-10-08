@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_power_requirements",
+  "info": {
+    "displayName": "Power Requirement"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "values": {
+      "type": "component",
+      "component": "elements.three-columns",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

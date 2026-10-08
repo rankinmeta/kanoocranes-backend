@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_crane_types_listings",
+  "info": {
+    "displayName": "Crane Types Listing"
+  },
+  "options": {},
+  "attributes": {
+    "crane_type": {
+      "type": "string",
+      "required": true
+    },
+    "crane_models": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::model.model"
+    }
+  },
+  "config": {}
+}

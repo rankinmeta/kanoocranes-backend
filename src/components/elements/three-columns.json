@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_three_columns",
+  "info": {
+    "displayName": "Four Columns"
+  },
+  "options": {},
+  "attributes": {
+    "col1": {
+      "type": "string",
+      "required": true
+    },
+    "col2": {
+      "type": "string"
+    },
+    "col3": {
+      "type": "string",
+      "required": true
+    },
+    "col4": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

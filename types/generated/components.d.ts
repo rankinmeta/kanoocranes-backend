@@ -431,6 +431,10 @@ export interface BlocksMainModelSection extends Struct.ComponentSchema {
       true
     >;
     overview: Schema.Attribute.Text & Schema.Attribute.Required;
+    power_requirement: Schema.Attribute.Component<
+      'elements.power-requirement',
+      true
+    >;
     short_description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -802,6 +806,17 @@ export interface ElementsCover extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsCraneTypesListing extends Struct.ComponentSchema {
+  collectionName: 'components_elements_crane_types_listings';
+  info: {
+    displayName: 'Crane Types Listing';
+  };
+  attributes: {
+    crane_models: Schema.Attribute.Relation<'oneToMany', 'api::model.model'>;
+    crane_type: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsCustomTableSection extends Struct.ComponentSchema {
   collectionName: 'components_elements_custom_table_sections';
   info: {
@@ -1030,6 +1045,17 @@ export interface ElementsOurSolutionsCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsPowerRequirement extends Struct.ComponentSchema {
+  collectionName: 'components_elements_power_requirements';
+  info: {
+    displayName: 'Power Requirement';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    values: Schema.Attribute.Component<'elements.three-columns', true>;
+  };
+}
+
 export interface ElementsProjectCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_project_cards';
   info: {
@@ -1168,6 +1194,19 @@ export interface ElementsTestimonial extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsThreeColumns extends Struct.ComponentSchema {
+  collectionName: 'components_elements_three_columns';
+  info: {
+    displayName: 'Four Columns';
+  };
+  attributes: {
+    col1: Schema.Attribute.String & Schema.Attribute.Required;
+    col2: Schema.Attribute.String;
+    col3: Schema.Attribute.String & Schema.Attribute.Required;
+    col4: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsUnitCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_unit_cards';
   info: {
@@ -1287,6 +1326,7 @@ declare module '@strapi/strapi' {
       'elements.certificate': ElementsCertificate;
       'elements.contact-link': ElementsContactLink;
       'elements.cover': ElementsCover;
+      'elements.crane-types-listing': ElementsCraneTypesListing;
       'elements.custom-table-section': ElementsCustomTableSection;
       'elements.download-card': ElementsDownloadCard;
       'elements.engineer-solution-info': ElementsEngineerSolutionInfo;
@@ -1304,6 +1344,7 @@ declare module '@strapi/strapi' {
       'elements.link': ElementsLink;
       'elements.menu': ElementsMenu;
       'elements.our-solutions-card': ElementsOurSolutionsCard;
+      'elements.power-requirement': ElementsPowerRequirement;
       'elements.project-card': ElementsProjectCard;
       'elements.projects': ElementsProjects;
       'elements.rent-menu': ElementsRentMenu;
@@ -1314,6 +1355,7 @@ declare module '@strapi/strapi' {
       'elements.tag-title': ElementsTagTitle;
       'elements.team-member': ElementsTeamMember;
       'elements.testimonial': ElementsTestimonial;
+      'elements.three-columns': ElementsThreeColumns;
       'elements.unit-card': ElementsUnitCard;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;

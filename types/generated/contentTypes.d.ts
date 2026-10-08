@@ -517,6 +517,10 @@ export interface ApiCategoryRentalCategoryRental
       'blocks.sales-category-section',
       false
     >;
+    crane_types_listing: Schema.Attribute.Component<
+      'elements.crane-types-listing',
+      true
+    >;
     cranes_section: Schema.Attribute.Component<'blocks.related-model', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

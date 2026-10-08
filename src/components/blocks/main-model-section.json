@@ -60,6 +60,11 @@
     },
     "max_lifting_height": {
       "type": "decimal"
+    },
+    "power_requirement": {
+      "type": "component",
+      "component": "elements.power-requirement",
+      "repeatable": true
     }
   },
   "config": {}
